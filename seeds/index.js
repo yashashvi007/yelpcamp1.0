@@ -25,4 +25,6 @@ const seedDb = async ()=>{
     }
 }
 
-seedDb()
+seedDb().then(()=>{
+    mongoose.connection.close()
+})
